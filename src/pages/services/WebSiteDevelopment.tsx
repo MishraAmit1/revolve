@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { ArrowLeft, CheckCircle, Code, Award, Sparkles, TrendingUp, Zap, Target, TestTube2, Cpu, Eye, Globe, BarChart3, PieChart, Building, GitBranch, Cloud, Server, Layers, Monitor, Smartphone, Shield, Palette } from 'lucide-react';
 
 
-import javaLogo from "@/assets/javalogo.svg"
-import phpLogo from "@/assets/phplogo.webp"
-import cppLogo from "@/assets/cpluslogo.webp"
-import dotnetLogo from "@/assets/netlogo.webp"
+import pythonLogo from "@/assets/python.jpg"
+import reactjs from "@/assets/reactjs.png"
+import nodejs from "@/assets/nodejs.png"
+import sql from "@/assets/sql.png"
+import net from "@/assets/net.png"
 
 // Add CSS animations
 const styles = `
@@ -84,26 +85,32 @@ const processSteps = {
 // Technology expertise data
 const technologies = [
     {
-        name: "Java",
-        logo: javaLogo,
-        category: "Java Development",
-        description: "Enterprise Java solutions"
+        name: "Python",
+        logo: pythonLogo,
+        category: "Python Development",
+        description: "Enterprise Python solutions"
     },
     {
-        name: "PHP",
-        logo: phpLogo,
-        category: "Php Development",
+        name: "ReactJS",
+        logo: reactjs,
+        category: "ReactJS Development",
         description: "Dynamic web applications"
     },
     {
-        name: "C++",
-        logo: cppLogo,
-        category: "C++ Programming",
+        name: "Nodejs",
+        logo: nodejs,
+        category: "Nodejs Development",
+        description: "High-performance applications"
+    },
+    {
+        name: "SQL",
+        logo: sql,
+        category: "SQL Development",
         description: "High-performance applications"
     },
     {
         name: ".NET",
-        logo: dotnetLogo,
+        logo: net,
         category: ".NET Development",
         description: "Microsoft ecosystem"
     }
@@ -168,7 +175,7 @@ const WebSiteDevelopment = () => {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                         {technologies.map((tech, index) => (
                             <div
                                 key={index}
@@ -181,7 +188,7 @@ const WebSiteDevelopment = () => {
                                             alt={tech.name}
                                             className="h-20 md:h-24 max-w-[240px] object-contain mb-2"
                                             style={{ minHeight: 60 }}
-                                            onError={e => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }}
+                                            onError={e => { const img = e.target as HTMLImageElement; img.style.display = 'none'; if (img.nextSibling instanceof HTMLElement) img.nextSibling.style.display = 'block'; }}
                                         />
                                     </div>
 

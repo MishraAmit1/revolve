@@ -52,7 +52,7 @@ const features = [
 const teamMembers = [
   {
     name: "Nilesh Peswani",
-    role: "President",
+    role: "Founder & President",
     bio: "Visionary leader with 20+ years in software development, driving innovation and strategic growth.",
     image: nilesh,
     linkedin: "#",
