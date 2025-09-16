@@ -180,21 +180,6 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-
-              {/* Newsletter Signup */}
-              <div className="mt-8">
-                <h4 className="font-semibold mb-3">Stay Updated</h4>
-                <div className="flex">
-                  <input
-                    type="email"
-                    placeholder="Your email"
-                    className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-r-lg transition-colors duration-300">
-                    <ArrowRight className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>
