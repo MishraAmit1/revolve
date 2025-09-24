@@ -11,8 +11,7 @@ const testimonials = [
     company: "TechCorp Solutions",
     industry: "Technology",
     location: "USA",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b5bb?w=150&h=150&fit=crop&crop=face",
-    content: "Revolve  transformed our business intelligence capabilities. Their expertise in data engineering and analytics helped us make data-driven decisions that increased our revenue by 35%. The team's professionalism and dedication are unmatched.",
+    content: "I have worked with the employees of Revolve Solutions for many, many years and I have to say that they have been the best consultants I have ever worked with.  Their response time is really fast, and they always look deep into the issue and figure out many different solution options.  They have many years of experience, and it shows in their responses.  The customer service aspect is outstanding as they are always willing to help, no matter how big or small or day or night.  I would recommend them to any colleague 100%",
     rating: 5,
     project: "Business Intelligence Platform",
     featured: true
@@ -24,8 +23,7 @@ const testimonials = [
     company: "PropTech Innovations",
     industry: "Real Estate",
     location: "Singapore",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    content: "Revolve  has done an excellent job staffing our contract resource requirements for Yardi application support. They are timely, provide quality resources and work. I also feel they operate with integrity, which is of utmost importance when securing a staffing partner.",
+    content: "Revolve Solutions has done an excellent job staffing our contract resource requirements for Yardi application support. They are timely, provide quality resources and work. I also feel they operate with integrity, which is of utmost importance when securing a staffing partner.I would like to take this opportunity to thank you for all the support Revolve Solutions provided during our engagement.",
     rating: 5,
     project: "Yardi Application Support",
     featured: true
@@ -33,25 +31,23 @@ const testimonials = [
   {
     id: 3,
     name: "Michael Kerckhof",
-    role: "IT Director",
+    role: "IT Director, Saif Al Ghurair Real Estate Group",
     company: "Saif Al Ghurair Real Estate Group",
     industry: "Real Estate",
     location: "UAE",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-    content: "The revolve team have been invaluable to our success. They are very knowledgeable and responsive whenever there is an issue. There are no problems too big or small for them. The revolve team would be a great addition to any organization.",
+    content: "Our overall experience working with Revolve has been positive. The Revolve team brought relevant domain expertise which made the business stakeholders and key users feel comfortable in working together. Getting a delivery done on time is often challenging but the Revolve team showed great commitment and did not hesitate to work hard and make extra effort to get things done. Knowing the people involved are reliable and can be counted on is a big plus for me.",
     rating: 5,
     project: "IT Infrastructure Management",
     featured: true
   },
   {
     id: 4,
-    name: "Sarah Mitchell",
-    role: "CTO",
+    name: "Dwayne Thomas",
+    role: "Controller",
     company: "FinanceFlow Ltd",
     industry: "Finance",
     location: "UK",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
-    content: "Working with Revolve  on our fintech platform was a game-changer. Their technical expertise and attention to detail helped us launch ahead of schedule while maintaining the highest security standards.",
+    content: "The revolve team have been invaluable to our success. They are very knowledgeable and responsive whenever there is an issue. There are no problems too big or small for them. The revolve team would be a great addition to any organization.",
     rating: 5,
     project: "Fintech Platform Development",
     featured: false
@@ -63,7 +59,6 @@ const testimonials = [
     company: "Global Logistics Co",
     industry: "Logistics",
     location: "India",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
     content: "The supply chain management system developed by Revolve  has revolutionized our operations. We've seen a 40% improvement in efficiency and significant cost savings. Highly recommended!",
     rating: 5,
     project: "Supply Chain Management System",
@@ -76,7 +71,6 @@ const testimonials = [
     company: "MedTech Innovations",
     industry: "Healthcare",
     location: "USA",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face",
     content: "Revolve  delivered a comprehensive healthcare management system that exceeded our expectations. Their understanding of healthcare compliance and patient data security was exceptional.",
     rating: 5,
     project: "Healthcare Management System",
@@ -89,7 +83,6 @@ const testimonials = [
     company: "Smart City Solutions",
     industry: "Government",
     location: "KSA",
-    image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=150&h=150&fit=crop&crop=face",
     content: "The smart city infrastructure project was complex, but Revolve  handled it with expertise. Their IoT solutions and data analytics capabilities have transformed our urban management approach.",
     rating: 5,
     project: "Smart City Infrastructure",
@@ -102,15 +95,45 @@ const testimonials = [
     company: "RetailMax Group",
     industry: "Retail",
     location: "UK",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
     content: "Our e-commerce platform transformation was seamless thanks to Revolve . They not only delivered on time but also provided excellent post-launch support. Sales increased by 60% in the first quarter!",
     rating: 5,
     project: "E-commerce Platform",
     featured: false
   }
 ];
+
 const industries = ["All", "Technology", "Real Estate", "Finance", "Logistics", "Healthcare", "Government", "Retail"];
 const locations = ["All", "USA", "DUBAI", "India", "UAE", "KSA", "Singapore"];
+
+// Function to get initials from name
+const getInitials = (name) => {
+  const words = name.split(' ');
+  if (words.length >= 2) {
+    return words[0][0].toUpperCase() + words[1][0].toUpperCase();
+  }
+  return words[0][0].toUpperCase();
+};
+
+// Function to generate color based on name
+const getColorFromName = (name) => {
+  const colors = [
+    'bg-blue-500',
+    'bg-purple-500',
+    'bg-green-500',
+    'bg-red-500',
+    'bg-yellow-500',
+    'bg-indigo-500',
+    'bg-pink-500',
+    'bg-teal-500'
+  ];
+
+  let hash = 0;
+  for (let i = 0; i < name.length; i++) {
+    hash = name.charCodeAt(i) + ((hash << 5) - hash);
+  }
+
+  return colors[Math.abs(hash) % colors.length];
+};
 
 const Testimonials = () => {
   const [filteredTestimonials, setFilteredTestimonials] = useState(testimonials);
@@ -118,6 +141,7 @@ const Testimonials = () => {
   const [selectedLocation, setSelectedLocation] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [showOnlyFeatured, setShowOnlyFeatured] = useState(false);
+
   const filterTestimonials = (industry, location, search, featured) => {
     let filtered = testimonials;
 
@@ -170,6 +194,7 @@ const Testimonials = () => {
     { icon: Award, label: "Success Rate", value: "98%", color: "purple" },
     { icon: Heart, label: "Satisfaction", value: "5.0", color: "pink" }
   ];
+
   return (
     <div className="min-h-screen md:pt-20 pt-6">
       <Helmet>
@@ -357,11 +382,10 @@ const Testimonials = () => {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
                       <div className="relative">
-                        <img
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          className="w-16 h-16 lg:w-20 lg:h-20 rounded-full object-cover shadow-lg ring-4 ring-white"
-                        />
+                        {/* Profile Initials instead of image */}
+                        <div className={`w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center text-white font-bold text-xl lg:text-2xl shadow-lg ring-4 ring-white ${getColorFromName(testimonial.name)}`}>
+                          {getInitials(testimonial.name)}
+                        </div>
                         <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white"></div>
                       </div>
                       <div>

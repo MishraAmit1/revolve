@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Send, Phone, Mail, MapPin, CheckCircle } from 'lucide-react';
+import { Send, Phone, Mail, MapPin, CheckCircle, Clock } from 'lucide-react';
 import { useToast } from "@/components/ui/use-toast";
 import emailjs from 'emailjs-com';
 
@@ -61,13 +61,14 @@ const ContactSection = () => {
         })(),
         user_referrer: window.location.href,
         user_ip: 'Auto-detected',
-        user_timestamp: new Date().toLocaleString('en-IN', {
-          timeZone: 'Asia/Kolkata',
+        user_timestamp: new Date().toLocaleString('en-US', {
+          timeZone: 'America/New_York',
           year: 'numeric',
           month: 'long',
           day: 'numeric',
           hour: '2-digit',
-          minute: '2-digit'
+          minute: '2-digit',
+          timeZoneName: 'short'
         })
       };
 
@@ -315,7 +316,23 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-semibold mb-1">Visit Us</h4>
-                  <p className="text-blue-100">D111, Regency Plaza, 1st floor, Mumbai - 421003</p>
+                  <p className="text-blue-100">Ashburn, VA 20147</p>
+                </div>
+              </motion.div>
+
+              {/* Time Zone Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.6, delay: 0.85 }}
+                className="glass rounded-2xl p-6 flex items-center space-x-4"
+              >
+                <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold mb-1">Time Zone</h4>
+                  <p className="text-blue-100">EST (Eastern Standard Time)</p>
                 </div>
               </motion.div>
             </div>
@@ -327,15 +344,15 @@ const ContactSection = () => {
               transition={{ duration: 0.6, delay: 0.9 }}
               className="glass rounded-2xl p-6"
             >
-              <h4 className="text-white font-semibold mb-4">Business Hours</h4>
+              <h4 className="text-white font-semibold mb-4">Business Hours (EST)</h4>
               <div className="space-y-2 text-blue-100">
                 <div className="flex justify-between">
                   <span>Monday - Friday</span>
-                  <span>9:00 AM - 6:00 PM</span>
+                  <span>9:00 AM - 6:00 PM EST</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Saturday</span>
-                  <span>10:00 AM - 4:00 PM</span>
+                  <span>10:00 AM - 4:00 PM EST</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Sunday</span>

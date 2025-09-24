@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import { ArrowLeft, CheckCircle, Code, Award, Sparkles, TrendingUp, Zap, Target, TestTube2, Cpu, Eye, Database, BarChart3, PieChart, Building, GitBranch, Cloud, Server, Layers } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Code, Award, TrendingUp, Zap, Cpu, Eye, Database, BarChart3, Building, GitBranch } from 'lucide-react';
 import kpg from "@/assets/kpg.webp"
 import tableau from "@/assets/tableau-logo.webp"
 import octoai from "@/assets/octopai_logo-2-1024x386.png.webp"
 import databricks from "@/assets/databricks_logor_stacked_rgb.webp"
 import snowflake from "@/assets/smowflake.webp"
-import erp from "@/assets/erp-systems.webp" // Placeholder — replace with actual ERP logo if available
-import powerbi from "@/assets/powerbi-logo.webp" // Placeholder
-import quickbooks from "@/assets/quickbooks-logo.webp" // Placeholder
+
 
 // Add CSS animations
 const styles = `
@@ -70,7 +68,6 @@ const serviceOfferings = [
         color: "pink"
     }
 ];
-
 // KPO Process Steps
 const processSteps = {
     'Assessment': {

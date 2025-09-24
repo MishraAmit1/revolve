@@ -15,7 +15,7 @@ const Navigation = () => {
     { name: 'Knowledge process Outsourcing', path: '/services/data-engineering', icon: Database },
     { name: 'Business Intelligence', path: '/services/business-intelligence', icon: PieChart },
     { name: 'Software Development', path: '/services/software-development', icon: Globe },
-    { name: 'UK Accounting and Payroll', path: '/services/uk-accounting-and-payroll', icon: Settings },
+    // { name: 'UK Accounting and Payroll', path: '/services/uk-accounting-and-payroll', icon: Settings },
     { name: 'Cloud Migration', path: '/services/cloud-migration', icon: Cloud },
   ];
 
@@ -113,7 +113,7 @@ const Navigation = () => {
               className={`nav-link ${isActive('/about') ? 'nav-active' : ''
                 } ${isHomePage && !isScrolled ? 'text-white' : 'text-white'} hover:text-blue-600 transition-colors`}
             >
-              About RS
+              About US
             </Link>
 
             <Link
@@ -208,7 +208,7 @@ const Navigation = () => {
                   className="block px-4 py-2 text-white hover:bg-blue-700 hover:text-white transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  About RS
+                  About US
                 </Link>
                 <Link
                   to="/careers"

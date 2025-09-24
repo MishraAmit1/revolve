@@ -8,9 +8,11 @@ import {
   Mail,
   Phone,
   MapPin,
-  ArrowRight
+  ArrowRight,
+  Clock
 } from 'lucide-react';
 import image from "../assets/image.png"
+
 const Footer = () => {
   const services = [
     { name: 'Business Intelligence', path: '/services/business-intelligence' },
@@ -174,8 +176,18 @@ const Footer = () => {
                   <div>
                     <p className="text-gray-300">Address</p>
                     <p className="text-white">
-                      D111, Regency Plaza, 1st floor<br />
-                      Mumbai - 421003
+                      Ashburn, VA 20147<br />
+                    </p>
+                  </div>
+                </div>
+
+                {/* Time Zone */}
+                <div className="flex items-start space-x-3">
+                  <Clock className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-gray-300">Time Zone</p>
+                    <p className="text-white">
+                      EST (Eastern Standard Time)
                     </p>
                   </div>
                 </div>
@@ -194,7 +206,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0">
             <p className="text-gray-300 text-center md:text-left">
-              Copyright {new Date().getFullYear()} © Revolve . All rights reserved. Crafted By <a href="https://www.ariesinnovation.com/">Aries Innovation</a>
+              Copyright {new Date().getFullYear()} © Revolve . All rights reserved. Crafted By <a href="https://www.ariesinnovation.com/" className="hover:text-blue-400 transition-colors">Aries Innovation</a>
             </p>
           </div>
         </motion.div>
