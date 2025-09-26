@@ -67,7 +67,7 @@ const Footer = () => {
               {/* Social Media */}
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/revolve-solutions-private-limited/ "
                   className="p-2 bg-white/10 rounded-lg hover:bg-blue-600 transition-colors duration-300"
                 >
                   <Linkedin className="w-5 h-5" />

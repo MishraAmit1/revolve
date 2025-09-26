@@ -50,7 +50,7 @@ const teamMembers = [
     role: "Founder & President",
     bio: "Visionary leader with 20+ years in software development, driving innovation and strategic growth.",
     image: nilesh,
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/nilesh-peswani-70180221/ ",
     email: "nilesh@revolvespl.com"
   },
   {
@@ -58,7 +58,7 @@ const teamMembers = [
     role: "Head of Business Management",
     bio: "Strategic business expert focused on operational excellence and client relationship management.",
     image: abdul,
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/abdulraees-shaikh-85b9b470/",
     email: "raees@revolvespl.com"
   },
   {
@@ -66,7 +66,7 @@ const teamMembers = [
     role: 'CEO',
     bio: 'Sukhman Sandhu is an accomplished finance and accounting executive with extensive experience in government contracting, financial systems implementation, and operational efficiency. As Co-Founder and CEO, she brings deep expertise in GAAP, FAR, CAS, and ASC 606 compliance, along with a proven track record of leading scalable accounting operations and system integrations. With a background in directing multi-million-dollar financial functions and building high-performing teams, Sukhman is committed to delivering strategic financial leadership and long-term value to clients.',
     image: sukhman,
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/sukhman-kaur-sandhu/',
     email: 'sukhman@revolvespl.com',
   },
   {
@@ -74,7 +74,7 @@ const teamMembers = [
     role: "COO of Company",
     bio: "Operations excellence leader ensuring seamless project delivery and team coordination.",
     image: shaji,
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/shajij/ ",
     email: "shaji@revolvespl.com"
   }
 ];

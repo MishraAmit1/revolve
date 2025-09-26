@@ -7,8 +7,8 @@ const testimonials = [
     name: "Jamie Kowalczyk",
     role: "Senior Controller",
     company: "TechCorp Solutions",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b5bb?w=150&h=150&fit=crop&crop=face",
-    content: "Revolve  transformed our business intelligence capabilities. Their expertise in data engineering and analytics helped us make data-driven decisions that increased our revenue by 35%. The team's professionalism and dedication are unmatched.",
+    // image: "https://images.unsplash.com/photo-1494790108755-2616b612b5bb?w=150&h=150&fit=crop&crop=face", // REMOVED
+    content: "Revolve transformed our business intelligence capabilities. Their expertise in data engineering and analytics helped us make data-driven decisions that increased our revenue by 35%. The team's professionalism and dedication are unmatched.",
     rating: 5
   },
   {
@@ -16,8 +16,8 @@ const testimonials = [
     name: "Sujatha Dhanapal",
     role: "Lead - Yardi Application Support",
     company: "PropTech Innovations",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    content: "Revolve  has done an excellent job staffing our contract resource requirements for Yardi application support. They are timely, provide quality resources and work. I also feel they operate with integrity, which is of utmost importance when securing a staffing partner.",
+    // image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face", // REMOVED
+    content: "Revolve has done an excellent job staffing our contract resource requirements for Yardi application support. They are timely, provide quality resources and work. I also feel they operate with integrity, which is of utmost importance when securing a staffing partner.",
     rating: 5
   },
   {
@@ -25,7 +25,7 @@ const testimonials = [
     name: "Michael Kerckhof",
     role: "IT Director",
     company: "Saif Al Ghurair Real Estate Group",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    // image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", // REMOVED
     content: "The revolve team have been invaluable to our success. They are very knowledgeable and responsive whenever there is an issue. There are no problems too big or small for them. The revolve team would be a great addition to any organization.",
     rating: 5
   }
@@ -56,6 +56,20 @@ const TestimonialsSection = () => {
 
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
+  };
+
+  // Helper to get initials from name
+  const getInitials = (name) => {
+    const parts = name.split(' ').filter(n => n.length > 0);
+    let initials = '';
+    if (parts.length >= 2) {
+      initials = parts[0][0] + parts[1][0];
+    } else if (parts.length === 1) {
+      initials = parts[0].substring(0, 2).toUpperCase();
+    } else {
+      initials = name.substring(0, 2).toUpperCase();
+    }
+    return initials.toUpperCase();
   };
 
   return (
@@ -141,11 +155,10 @@ const TestimonialsSection = () => {
                       {/* Author info */}
                       <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                         <div className="relative">
-                          <img
-                            src={testimonial.image}
-                            alt={testimonial.name}
-                            className="w-16 h-16 lg:w-20 lg:h-20 rounded-full object-cover shadow-lg ring-4 ring-white"
-                          />
+                          {/* Initials Avatar */}
+                          <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center text-white text-xl lg:text-2xl font-bold shadow-lg ring-4 ring-white">
+                            {getInitials(testimonial.name)}
+                          </div>
                           <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white"></div>
                         </div>
                         <div className="text-center sm:text-left">

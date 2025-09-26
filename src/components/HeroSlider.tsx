@@ -28,7 +28,7 @@ const slides = [
   {
     id: 3,
     image: heroSlide3,
-    title: "Excellence in Cloud Migration & Business Intelligence",
+    title: "Excellence in Software Development & Business Intelligence",
     subtitle: "Trusted by 20+ Active Clients Across 6 Countries",
     cta: "Contact Us",
     ctaLink: "/contact",

@@ -108,12 +108,6 @@ const technologies = [
         category: "SQL Development",
         description: "High-performance applications"
     },
-    {
-        name: ".NET",
-        logo: net,
-        category: ".NET Development",
-        description: "Microsoft ecosystem"
-    }
 ];
 
 const WebSiteDevelopment = () => {
@@ -175,7 +169,7 @@ const WebSiteDevelopment = () => {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                         {technologies.map((tech, index) => (
                             <div
                                 key={index}
