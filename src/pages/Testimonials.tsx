@@ -191,8 +191,8 @@ const Testimonials = () => {
   const stats = [
     { icon: Users, label: "Happy Clients", value: "200+", color: "blue" },
     { icon: Building, label: "Countries", value: "6", color: "indigo" },
-    { icon: Award, label: "Success Rate", value: "98%", color: "purple" },
-    { icon: Heart, label: "Satisfaction", value: "5.0", color: "pink" }
+    // { icon: Award, label: "Success Rate", value: "98%", color: "purple" },
+    // { icon: Heart, label: "Satisfaction", value: "5.0", color: "pink" }
   ];
 
   return (
