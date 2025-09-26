@@ -280,7 +280,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 uppercase font-bold leading-8 tracking-wider">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 uppercase font-bold leading-8 tracking-wider">
             {stats1.map((stat, index) => (
               <motion.div
                 key={index}
@@ -416,28 +416,6 @@ const About = () => {
           </ul>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-blue-gradient text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold mb-6">Need a Consultation?</h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Looking for expert advice or want to discuss your project requirements? Get in touch with our team for a free consultation.
-            </p>
-            <Link to="/contact" className="btn-orange text-lg px-8 py-4 inline-flex items-center">
-              Book a Free Consultation
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
       <Suspense fallback={<div className="py-10">Loading Blog...</div>}>
         <BlogSection />
       </Suspense>
