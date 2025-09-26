@@ -66,17 +66,44 @@ const WhyChooseUsSection = () => {
           </h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             Our commitment isn't just about delivering — it's about exceeding expectations
-
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+        {/* First row with 3 cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+          {features.slice(0, 3).map((feature, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="group"
+            >
+              <div className="glass rounded-2xl p-8 text-center card-lift hover:bg-white/20 transition-all duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-6 group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300 icon-bounce">
+                  <feature.icon className="w-8 h-8 text-white icon-rotate" />
+                </div>
+
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {feature.title}
+                </h3>
+
+                <p className="text-blue-100">
+                  {feature.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Second row with 2 cards centered */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto lg:max-w-4xl">
+          {features.slice(3, 5).map((feature, index) => (
+            <motion.div
+              key={index + 3}
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.6, delay: (index + 3) * 0.1 }}
               className="group"
             >
               <div className="glass rounded-2xl p-8 text-center card-lift hover:bg-white/20 transition-all duration-300">

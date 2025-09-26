@@ -73,13 +73,13 @@ const Footer = () => {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/revolve_solutions_pvt_ltd/"
                   className="p-2 bg-white/10 rounded-lg hover:bg-blue-600 transition-colors duration-300"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/people/Revolve-Solution-Private-Limited/100093308727397"
                   className="p-2 bg-white/10 rounded-lg hover:bg-blue-600 transition-colors duration-300"
                 >
                   <Facebook className="w-5 h-5" />

@@ -28,7 +28,7 @@ const teamMembers = [
 
   {
     name: 'Sukhman Sandhu',
-    role: 'CEO',
+    role: 'Co-founder and CEO',
     bio: 'Sukhman Sandhu is an accomplished finance and accounting executive with extensive experience in government contracting, financial systems implementation, and operational efficiency. As Co-Founder and CEO, she brings deep expertise in GAAP, FAR, CAS, and ASC 606 compliance, along with a proven track record of leading scalable accounting operations and system integrations. With a background in directing multi-million-dollar financial functions and building high-performing teams, Sukhman is committed to delivering strategic financial leadership and long-term value to clients.',
     image: sukhman,
     linkedin: 'https://www.linkedin.com/in/sukhman-kaur-sandhu/',
@@ -36,8 +36,8 @@ const teamMembers = [
   },
   {
     name: 'Shaji Joseph',
-    role: 'Co-founder',
-    bio: 'Operations excellence leader ensuring seamless project delivery and team coordination.',
+    role: 'COO',
+    bio: 'Shaji Joseph is a highly accomplished Business Leader and Strategic Yardi Architect with over 20 years of experience specializing in the strategic application of Yardi ERP solutions. His expertise spans the full spectrum of Commercial and Residential property management, encompassing comprehensive, end-to-end modules. A recognized authority in real estate technology and digital transformation, Shaji excels at driving significant operational improvements. He has a proven track record of successfully leading large-scale Yardi implementations, system optimizations, and complex, cross-functional integrations designed to maximize operational efficiency and financial accuracy. Shaji delivers scalable, compliance-driven solutions that directly align technology strategy with core business objectives, ensuring organizations achieve enhanced productivity, transparency, and sustainable long-term growth.',
     image: shaji,
     linkedin: 'https://www.linkedin.com/in/shajij/ ',
     email: 'shaji@revolvespl.com',

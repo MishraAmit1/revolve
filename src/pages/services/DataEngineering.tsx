@@ -461,6 +461,7 @@ const DataEngineering = () => {
             </section>
 
             {/* Our Expertise Section — KPO Tools */}
+            {/* Our Expertise Section — KPO Tools */}
             <section className="py-16 lg:py-24 bg-gradient-to-br from-slate-50 to-indigo-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
@@ -476,10 +477,36 @@ const DataEngineering = () => {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        {technologies.map((tech, index) => (
+                    {/* First row with 4 cards */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                        {technologies.slice(0, 4).map((tech, index) => (
                             <div
                                 key={index}
+                                className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 relative overflow-hidden"
+                            >
+                                <div className="text-center">
+                                    <div className="flex flex-col items-center">
+                                        <img
+                                            src={tech.logo}
+                                            alt={tech.name}
+                                            className="h-20 md:h-24 max-w-[240px] object-contain mb-2"
+                                            style={{ minHeight: 60 }}
+                                            onError={e => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }}
+                                        />
+                                    </div>
+                                    <p className="text-sm text-gray-500">{tech.category}</p>
+                                </div>
+
+                                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none"></div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Second row with 3 cards centered */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                        {technologies.slice(4, 7).map((tech, index) => (
+                            <div
+                                key={index + 4}
                                 className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 relative overflow-hidden"
                             >
                                 <div className="text-center">

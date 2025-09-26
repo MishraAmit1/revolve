@@ -63,7 +63,7 @@ const teamMembers = [
   },
   {
     name: 'Sukhman Sandhu',
-    role: 'CEO',
+    role: 'Co-founder and CEO',
     bio: 'Sukhman Sandhu is an accomplished finance and accounting executive with extensive experience in government contracting, financial systems implementation, and operational efficiency. As Co-Founder and CEO, she brings deep expertise in GAAP, FAR, CAS, and ASC 606 compliance, along with a proven track record of leading scalable accounting operations and system integrations. With a background in directing multi-million-dollar financial functions and building high-performing teams, Sukhman is committed to delivering strategic financial leadership and long-term value to clients.',
     image: sukhman,
     linkedin: 'https://www.linkedin.com/in/sukhman-kaur-sandhu/',
