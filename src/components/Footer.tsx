@@ -17,7 +17,7 @@ const Footer = () => {
   const services = [
     { name: 'Business Intelligence', path: '/services/business-intelligence' },
     { name: 'Cloud Migration', path: '/services/cloud-migration' },
-    { name: 'Data Engineering', path: '/services/data-engineering' },
+    { name: 'Knowledge Process Outsourcing', path: '/services/data-engineering' },
     { name: 'Deltek Costpoint', path: '/services/deltek-costpoint' },
     { name: 'Yardi Services', path: '/services/yardi-property-management-software' },
     { name: 'Software Development', path: '/services/software-development' },
@@ -206,7 +206,17 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0">
             <p className="text-gray-300 text-center md:text-left">
-              Copyright {new Date().getFullYear()} © Revolve . All rights reserved. Crafted By <a href="https://www.ariesinnovation.com/" className="hover:text-blue-400 transition-colors">Aries Innovation</a>
+              Copyright {new Date().getFullYear()} ©
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 font-semibold mx-1">
+                Revolve
+              </span>
+              . All rights reserved. Crafted By
+              <a
+                href="https://www.ariesinnovation.com/"
+                className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 hover:from-orange-300 hover:to-yellow-300 transition-all duration-300 font-semibold ml-1"
+              >
+                Aries Innovation
+              </a>
             </p>
           </div>
         </motion.div>
