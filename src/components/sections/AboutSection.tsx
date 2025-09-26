@@ -14,12 +14,12 @@ const AboutSection = () => {
     {
       icon: Users,
       number: "40+",
-      label: "Software Experts",
+      label: "System Experts",
       description: "Experienced professionals"
     },
     {
       icon: Clock,
-      number: "4+",
+      number: "7+",
       label: "Decades",
       description: "Of industry experience"
     },

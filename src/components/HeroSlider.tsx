@@ -11,7 +11,7 @@ const slides = [
     id: 1,
     image: heroSlide1,
     title: "Unlock Innovation Potential with Revolve ",
-    subtitle: "Software Experts with 5+ Decades of Experience",
+    subtitle: "Experts with 7+ Decades of Experience",
     cta: "Discover Our Services",
     ctaLink: "/services",
     overlay: "from-navy/80 to-blue-600/60"
@@ -19,7 +19,7 @@ const slides = [
   {
     id: 2,
     image: heroSlide2,
-    title: "Transform Your Business with Data Engineering",
+    title: "Transform Your Business with Us",
     subtitle: "Leading Partner for Enterprises, SMEs & Technology Challengers",
     cta: "View Our Projects",
     ctaLink: "/about",
@@ -30,7 +30,7 @@ const slides = [
     image: heroSlide3,
     title: "Excellence in Cloud Migration & Business Intelligence",
     subtitle: "Trusted by 20+ Active Clients Across 6 Countries",
-    cta: "Get Free Consultation",
+    cta: "Contact Us",
     ctaLink: "/contact",
     overlay: "from-navy/90 to-blue-700/70"
   }
@@ -289,8 +289,8 @@ const HeroSlider = () => {
               key={index}
               onClick={() => goToSlide(index)}
               className={`relative w-12 h-3 rounded-full transition-all duration-300 slider-indicator ${currentSlide === index
-                  ? 'bg-white'
-                  : 'bg-white/40 hover:bg-white/60'
+                ? 'bg-white'
+                : 'bg-white/40 hover:bg-white/60'
                 }`}
             >
               {currentSlide === index && (
