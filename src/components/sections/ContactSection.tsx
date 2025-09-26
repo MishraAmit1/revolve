@@ -3,12 +3,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Send, Phone, Mail, MapPin, CheckCircle, Clock } from 'lucide-react';
 import { useToast } from "@/components/ui/use-toast";
-import emailjs from 'emailjs-com';
-
-// EmailJS Configuration
-const EMAILJS_SERVICE_ID = "service_a69cmrl";
-const EMAILJS_TEMPLATE_ID = "template_81gs4rf";
-const EMAILJS_PUBLIC_KEY = "tuMby3K1-jT62DW4C";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -27,7 +21,7 @@ const ContactSection = () => {
     threshold: 0.1,
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -35,81 +29,63 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      // Prepare email template parameters
-      const templateParams = {
-        // Main fields
-        from_name: formData.name,
-        from_email: formData.email,
-        phone_number: formData.phone || 'Not provided',
-        message: formData.message,
+      // Web3Forms API submission
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // IMPORTANT: Replace this with your actual access key from web3forms.com
+          access_key: "091056b9-c259-40c6-b480-ea28d5963bd7", // Get from https://web3forms.com
 
-        // System info
-        user_country: 'India',
-        user_platform: navigator.platform || 'Unknown',
-        user_browser: (() => {
-          const ua = navigator.userAgent;
-          if (ua.includes('Chrome')) return 'Chrome';
-          if (ua.includes('Firefox')) return 'Firefox';
-          if (ua.includes('Safari')) return 'Safari';
-          if (ua.includes('Edge')) return 'Edge';
-          return 'Unknown';
-        })(),
-        user_referrer: window.location.href,
-        user_ip: 'Auto-detected',
-        user_timestamp: new Date().toLocaleString('en-US', {
-          timeZone: 'America/New_York',
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit',
-          timeZoneName: 'short'
-        })
-      };
+          // Email where you want to receive messages
+          to: "contact@revolvespl.com",
 
-      console.log("Sending email with params:", templateParams);
+          // Email subject
+          subject: "New Contact Form Submission from Revolve Website",
 
-      // Send Email via EmailJS
-      const emailResult = await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_PUBLIC_KEY
-      );
+          // Form data
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || "Not provided",
+          message: formData.message,
 
-      console.log("Email sent successfully:", emailResult);
-
-      setIsSubmitted(true);
-      toast({
-        title: "Message Sent Successfully!",
-        description: "We'll get back to you within 24 hours.",
+          // Additional info
+          from_name: "Revolve Contact Form",
+          replyto: formData.email,
+        }),
       });
 
-      // Reset form
-      setFormData({ name: '', email: '', phone: '', message: '' });
+      const data = await response.json();
 
-      // Hide success message after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
+      if (data.success) {
+        setIsSubmitted(true);
+        toast({
+          title: "Message Sent Successfully!",
+          description: "We'll get back to you within 24 hours.",
+        });
 
-    } catch (error) {
-      console.error('Error sending email:', error);
+        // Reset form
+        setFormData({ name: '', email: '', phone: '', message: '' });
 
-      let errorMessage = "There was an error sending your message. Please try again.";
-
-      if (error.text) {
-        errorMessage = `Email service error: ${error.text}`;
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 5000);
+      } else {
+        throw new Error(data.message || "Something went wrong");
       }
-
+    } catch (error) {
+      console.error('Error:', error);
       toast({
         title: "Failed to Send Message",
-        description: errorMessage,
+        description: "Please try again later or contact us directly.",
         variant: "destructive",
       });
     } finally {
