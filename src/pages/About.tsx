@@ -38,11 +38,6 @@ const features = [
     description: "Continuous improvement and refinement throughout the development process"
   },
   {
-    icon: Headphones,
-    title: "24x7 Support",
-    description: "Round-the-clock technical support and maintenance for peace of mind"
-  },
-  {
     icon: Heart,
     title: "Nurturing Relations",
     description: "Building long-term partnerships based on trust and mutual success"
@@ -125,8 +120,8 @@ const clientLogos = [
 ];
 
 const stats = [
-  { icon: Users, number: "40+", label: "Software Experts", description: "Dedicated professionals" },
-  { icon: Clock, number: "4+", label: "Decades", description: "Industry experience" },
+  { icon: Users, number: "40+", label: "Experts", description: "Dedicated professionals" },
+  { icon: Clock, number: "7+", label: "Decades", description: "Industry experience" },
   { icon: Award, number: "20+", label: "Active Clients", description: "Global partnerships" },
   { icon: Globe, number: "6", label: "Countries", description: "Worldwide presence" }
 ];
@@ -134,8 +129,7 @@ const stats = [
 const stats1 = [
   { number: "20+", label: "Active Clients" },
   { number: "40+", label: "Projects Done" },
-  { number: "8+", label: "Team Advisors" },
-  { number: "8+", label: "Glorious Years" }
+  { number: "10+", label: "Glorious Years" }
 ];
 
 const values = [

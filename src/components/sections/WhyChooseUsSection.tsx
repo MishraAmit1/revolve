@@ -32,11 +32,6 @@ const features = [
     description: "Continuous improvement and refinement throughout the development process"
   },
   {
-    icon: Headphones,
-    title: "24x7 Support",
-    description: "Round-the-clock technical support and maintenance for peace of mind"
-  },
-  {
     icon: Heart,
     title: "Nurturing Relations",
     description: "Building long-term partnerships based on trust and mutual success"
