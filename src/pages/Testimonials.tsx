@@ -444,12 +444,7 @@ const Testimonials = () => {
               Start Your Success Story
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-2xl hover:bg-white hover:text-blue-600 transition-all duration-300 hover:scale-105"
-            >
-              Get Free Consultation
-            </a>
+
           </div>
         </div>
       </section>

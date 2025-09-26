@@ -17,56 +17,6 @@ import { Helmet } from 'react-helmet-async';
 
 const services = [
   {
-    id: 'business-intelligence',
-    icon: BarChart3,
-    title: "Business Intelligence",
-    shortDescription: "Transform data into actionable insights with comprehensive BI solutions",
-    description: "Our Business Intelligence services help organizations make data-driven decisions through advanced analytics, reporting, and visualization tools. We design and implement BI solutions that turn complex data into clear, actionable insights.",
-    features: [
-      "Advanced Data Analytics",
-      "Interactive Dashboards",
-      "Real-time Reporting",
-      "Data Visualization",
-      "Performance Metrics",
-      "Predictive Analytics"
-    ],
-    technologies: ["Power BI", "Tableau", "QlikView", "SQL Server", "Oracle", "Python"],
-    gradient: "from-blue-500 to-blue-600"
-  },
-  {
-    id: 'cloud-migration',
-    icon: Cloud,
-    title: "Cloud Migration",
-    shortDescription: "Seamless transition to cloud infrastructure with zero downtime",
-    description: "We provide end-to-end cloud migration services that help businesses leverage the power of cloud computing. Our expertise ensures a smooth transition with improved scalability, security, and cost-effectiveness.",
-    features: [
-      "Cloud Strategy Planning",
-      "Infrastructure Assessment",
-      "Migration Roadmap",
-      "Security Implementation",
-      "Performance Optimization",
-    ],
-    technologies: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform"],
-    gradient: "from-purple-500 to-purple-600"
-  },
-  {
-    id: 'data-engineering',
-    icon: Database,
-    title: "Knowledge process Outsourcing",
-    shortDescription: "Build robust data pipelines and architectures for scalable solutions",
-    description: "Our data engineering services focus on building scalable, reliable data infrastructure that supports your business operations and analytics needs. We create efficient data pipelines and robust architectures.",
-    features: [
-      "Data Pipeline Development",
-      "ETL/ELT Processes",
-      "Data Warehouse Design",
-      "Real-time Processing",
-      "Data Quality Management",
-      "Scalable Architecture"
-    ],
-    technologies: ["Apache Spark", "Kafka", "Airflow", "Snowflake", "BigQuery", "MongoDB"],
-    gradient: "from-green-500 to-green-600"
-  },
-  {
     id: 'deltek-costpoint',
     icon: Building2,
     title: "Deltek Costpoint",
@@ -82,6 +32,23 @@ const services = [
     ],
     technologies: ["Deltek Costpoint", ".NET", "SQL Server", "Crystal Reports", "Web Services"],
     gradient: "from-orange-500 to-orange-600"
+  },
+  {
+    id: 'data-engineering',
+    icon: Database,
+    title: "Knowledge Process Outsourcing",
+    shortDescription: "Build robust data pipelines and architectures for scalable solutions",
+    description: "Our data engineering services focus on building scalable, reliable data infrastructure that supports your business operations and analytics needs. We create efficient data pipelines and robust architectures.",
+    features: [
+      "Data Pipeline Development",
+      "ETL/ELT Processes",
+      "Data Warehouse Design",
+      "Real-time Processing",
+      "Data Quality Management",
+      "Scalable Architecture"
+    ],
+    technologies: ["Apache Spark", "Kafka", "Airflow", "Snowflake", "BigQuery", "MongoDB"],
+    gradient: "from-green-500 to-green-600"
   },
   {
     id: 'yardi-services',
@@ -118,6 +85,23 @@ const services = [
     gradient: "from-indigo-500 to-indigo-600"
   },
   {
+    id: 'business-intelligence',
+    icon: BarChart3,
+    title: "Business Intelligence",
+    shortDescription: "Transform data into actionable insights with comprehensive BI solutions",
+    description: "Our Business Intelligence services help organizations make data-driven decisions through advanced analytics, reporting, and visualization tools. We design and implement BI solutions that turn complex data into clear, actionable insights.",
+    features: [
+      "Advanced Data Analytics",
+      "Interactive Dashboards",
+      "Real-time Reporting",
+      "Data Visualization",
+      "Performance Metrics",
+      "Predictive Analytics"
+    ],
+    technologies: ["Power BI", "Tableau", "QlikView", "SQL Server", "Oracle", "Python"],
+    gradient: "from-blue-500 to-blue-600"
+  },
+  {
     id: 'odoo-services',
     icon: Settings,
     title: "Odoo Services",
@@ -133,6 +117,22 @@ const services = [
     ],
     technologies: ["Odoo", "Python", "PostgreSQL", "JavaScript", "XML", "REST APIs"],
     gradient: "from-teal-500 to-teal-600"
+  },
+  {
+    id: 'cloud-migration',
+    icon: Cloud,
+    title: "Cloud Migration",
+    shortDescription: "Seamless transition to cloud infrastructure with zero downtime",
+    description: "We provide end-to-end cloud migration services that help businesses leverage the power of cloud computing. Our expertise ensures a smooth transition with improved scalability, security, and cost-effectiveness.",
+    features: [
+      "Cloud Strategy Planning",
+      "Infrastructure Assessment",
+      "Migration Roadmap",
+      "Security Implementation",
+      "Performance Optimization",
+    ],
+    technologies: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform"],
+    gradient: "from-purple-500 to-purple-600"
   }
 ];
 
@@ -285,9 +285,6 @@ const Services = () => {
               Get a free consultation with our experts today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="btn-orange text-lg px-8 py-4">
-                Get Free Consultation
-              </Link>
               <Link to="/about" className="btn-blue text-lg px-8 py-4">
                 Learn About Reve
               </Link>

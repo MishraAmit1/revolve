@@ -175,9 +175,6 @@ const YardiResidential = () => {
                         Try it now and transform your residential property management operations
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors">
-                            <Link to="/contact">Get Free Consultation</Link>
-                        </button>
                         <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors">
                             <Link to="/services"> View Other Services</Link>
                         </button>

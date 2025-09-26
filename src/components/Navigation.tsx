@@ -11,10 +11,10 @@ const Navigation = () => {
 
   const services = [
     { name: 'Deltek Costpoint', path: '/services/deltek-costpoint', icon: FileText },
+    { name: 'Knowledge Process Outsourcing', path: '/services/data-engineering', icon: Database },
     { name: 'Yardi Property Management Software', path: '/services/yardi-property-management-software', icon: Home },
-    { name: 'Knowledge process Outsourcing', path: '/services/data-engineering', icon: Database },
-    { name: 'Business Intelligence', path: '/services/business-intelligence', icon: PieChart },
     { name: 'Software Development', path: '/services/software-development', icon: Globe },
+    { name: 'Business Intelligence', path: '/services/business-intelligence', icon: PieChart },
     // { name: 'UK Accounting and Payroll', path: '/services/uk-accounting-and-payroll', icon: Settings },
     { name: 'Cloud Migration', path: '/services/cloud-migration', icon: Cloud },
   ];
