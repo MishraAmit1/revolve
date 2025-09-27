@@ -266,20 +266,7 @@ const ContactSection = () => {
                 </div>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
-                className="glass rounded-2xl p-6 flex items-center space-x-4"
-              >
-                <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold mb-1">Call Us</h4>
-                  <p className="text-blue-100">+1 (555) 123-4567</p>
-                </div>
-              </motion.div>
+
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
