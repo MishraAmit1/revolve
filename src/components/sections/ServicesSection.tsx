@@ -25,7 +25,7 @@ const services = [
     icon: Home,
     title: "Yardi Services",
     description: "Comprehensive testing and auditing of your software",
-    link: "/services/yardi-services",
+    link: "/services/yardi-property-management-software",
     gradient: "from-red-500 to-red-600"
   },
   {
@@ -47,7 +47,7 @@ const services = [
     icon: Code,
     title: "Software Development",
     description: "More than just coding skills, experience makes us stand out",
-    link: "/services/web-development",
+    link: "/services/software-development",
     gradient: "from-indigo-500 to-indigo-600"
   },
   {

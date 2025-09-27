@@ -8,6 +8,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import PageTransition from "./components/PageTransition";
 import ScrollToTop from './ScrollToTop';
+import OddoServices from './pages/services/OddoServices';
 // Lazy load pages
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -46,6 +47,7 @@ const AppContent = () => {
               <Route path="/services/business-intelligence" element={<BusinessIntelligence />} />
               <Route path="/services/data-engineering" element={<DataEngineering />} />
               <Route path="/services/cloud-migration" element={<CloudMigration />} />
+              <Route path="/services/odoo-services" element={<OddoServices />} />
               <Route path="/services/deltek-costpoint" element={<DeltekCostpoint />} />
               <Route path="/services/yardi-property-management-software" element={<YardiProperty />} />
               <Route path="/yardi/residential" element={<YardiResidential />} />

@@ -51,7 +51,7 @@ const services = [
     gradient: "from-green-500 to-green-600"
   },
   {
-    id: 'yardi-services',
+    id: 'yardi-property-management-software',
     icon: Home,
     title: "Yardi Services",
     shortDescription: "Comprehensive Yardi property management solutions and support",
@@ -68,7 +68,7 @@ const services = [
     gradient: "from-red-500 to-red-600"
   },
   {
-    id: 'web-development',
+    id: 'software-development',
     icon: Code,
     title: "Software Development",
     shortDescription: "Modern, responsive web applications with cutting-edge technologies",
